@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Integrity Monitor — Know the instant a file changes</title>
+<meta name="description" content="A file integrity monitor for Windows, with encrypted cloud backup and secure file transfer built in." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">🔐</span>
+      <span>Integrity Monitor</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#why">Why it matters</a>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#cloud">Cloud &amp; transfer</a>
+      <a href="#download" class="nav-cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Free core monitoring · Windows</p>
+        <h1>Know the instant<br />a file <em>changes.</em></h1>
+        <p class="hero-sub">
+          Integrity Monitor watches the files you tell it to protect and proves,
+          with a cryptographic hash, whether they're still exactly what they were —
+          byte for byte. The moment something's off, you're alerted. One click restores it.
+          Back files up to the cloud, or send them to someone securely, right from the same app.
+        </p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary">Download for Windows</a>
+        </div>
+        <p class="hero-note">No account required to try it. Your files never leave your device.</p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hash-card">
+          <div class="hash-card-header">
+            <span class="hash-card-dot"></span>
+            <span>quarterly_report.xlsx</span>
+          </div>
+          <div class="hash-row">
+            <span class="hash-label">trusted</span>
+            <code class="hash-value">a3f9<span class="hash-quiet">c81e7b204d5f...e9210cba</span></code>
+          </div>
+          <div class="hash-row">
+            <span class="hash-label">current</span>
+            <code class="hash-value hash-diff">a3f9<span class="hash-changed">7d02a19c44f2</span><span class="hash-quiet">...e9210cba</span></code>
+          </div>
+          <div class="hash-card-alert">
+            <span class="alert-dot"></span> Change detected — 4 bytes differ from the trusted version
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY IT MATTERS ============ -->
+  <section id="why" class="section">
+    <div class="wrap">
+      <p class="eyebrow">Why it matters</p>
+      <h2>A file can be wrong<br />and still look completely normal.</h2>
+      <p class="section-lead">
+        Nothing about a tampered file necessarily looks different. The icon's the same,
+        the file size might barely move, the timestamp can be spoofed. The only way to
+        actually know a file hasn't changed is to compare it, byte for byte, against a
+        version you trust.
+      </p>
+
+      <div class="scenario-grid">
+        <div class="scenario-card">
+          <span class="scenario-icon">🦠</span>
+          <h3>Silent tampering</h3>
+          <p>Ransomware and malicious scripts often modify files quietly, long before
+             any visible symptom appears — by the time you notice, the damage is already done.</p>
+        </div>
+        <div class="scenario-card">
+          <span class="scenario-icon">🖊️</span>
+          <h3>Unauthorized edits</h3>
+          <p>Financial records, contracts, configuration files — anything that shouldn't
+             change without your knowledge deserves a witness that never blinks.</p>
+        </div>
+        <div class="scenario-card">
+          <span class="scenario-icon">🔁</span>
+          <h3>Honest mistakes</h3>
+          <p>Not every change is malicious. Sometimes it's the wrong version saved over the
+             right one. Integrity Monitor catches that too — and lets you undo it instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how" class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps. No configuration files, no servers to run.</h2>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Point it at a file</h3>
+          <p>Choose any file on your device. Integrity Monitor computes its SHA-256
+             hash — a unique fingerprint where changing even one byte produces a
+             completely different result.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>It keeps watching</h3>
+          <p>The app re-checks the file's hash continuously in the background,
+             comparing it against the trusted fingerprint you started with.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>You decide what happens</h3>
+          <p>The moment a hash stops matching, you're alerted with exactly what changed
+             and when. Reverse it back to the trusted version in one click, or accept it
+             as the new baseline if the change was intentional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features" class="section">
+    <div class="wrap">
+      <p class="eyebrow">What's inside</p>
+      <h2>Built for actually catching and fixing tampering — not just logging it.</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>↩ Reverse</h3>
+          <p>Restore a tampered file to its exact last known-good content, in one click.
+             No manual backups to dig through.</p>
+        </div>
+        <div class="feature-card">
+          <h3>✓ Resolve</h3>
+          <p>Made the change yourself on purpose? Accept it as the new trusted baseline
+             and keep monitoring from there.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔎 Review</h3>
+          <p>Inspect a monitored file's current content and metadata right inside the app,
+             no need to go dig through folders.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔒 Lock a file</h3>
+          <p>Deny external access to a file until you unlock it from inside the app.
+             Anything else that tries just sees "Access is denied."</p>
+        </div>
+        <div class="feature-card">
+          <h3>🕵 Audit trail</h3>
+          <p>Every alert records who was logged in and whether the change came through
+             a remote session — with the connecting IP, when detected.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📋 Cases</h3>
+          <p>A searchable log of everything you've reviewed, resolved, reversed, sent, or received —
+             organized, filterable, and easy to find later.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🌗 Light &amp; dark mode</h3>
+          <p>Same interface, your choice of look — remembered across sessions.</p>
+        </div>
+        <div class="feature-card">
+          <h3>👤 Free account</h3>
+          <p>Email sign-up, no payment for core monitoring — cloud backup is an optional paid add-on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOUD & TRANSFER ============ -->
+  <section id="cloud" class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow">Beyond monitoring</p>
+      <h2>Back files up, and send them, without leaving the app.</h2>
+      <p class="section-lead">
+        Two more layers on top of monitoring: an encrypted off-site copy of the files that
+        matter most, and a way to hand a file to someone else without emailing it around.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>☁️ Encrypted cloud backup</h3>
+          <p>Files are encrypted on your device before they ever leave it, then stored in your
+             own Google Drive. Restoring verifies the hash before saving anything — a corrupted
+             or tampered backup is refused, not silently restored.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🌐 Long-range transfer</h3>
+          <p>Send a file to anyone with an account, anywhere, using a short code instead of an
+             email address. They approve it before it ever downloads.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📶 Short-range transfer</h3>
+          <p>On the same WiFi? Send directly, device to device — no internet, no mobile data,
+             protected by a one-time PIN so nobody else on the network can send you anything
+             uninvited.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔑 Password-gated retrieval</h3>
+          <p>Downloading a backup or accepting a transfer asks for your password again first —
+             so a device left unlocked can't be used to quietly pull your files.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOWNLOAD ============ -->
+  <section id="download" class="section section-alt download-section">
+    <div class="wrap">
+      <p class="eyebrow">Get it</p>
+      <h2>Free to use. Cloud backup and transfer available as add-ons.</h2>
+      <p class="section-lead">
+        Your monitored files and their history never leave your device. Cloud backup files
+        are encrypted before upload, and transfers are approved by the receiver before
+        anything downloads.
+      </p>
+
+      <div class="download-grid download-grid-single">
+        <div class="download-card">
+          <h3>Windows</h3>
+          <p>Portable — no install required, just run it.</p>
+          <a href="https://github.com/timothymartinluther1-gif/fims-desktop/releases/download/latest/IntegrityMonitor.exe" class="btn btn-primary">Download .exe</a>
+          <p class="download-note">
+            Unsigned build — Windows SmartScreen may warn on first run.
+            Click "More info" → "Run anyway." This is expected for a new app
+            without a paid code-signing certificate, not a sign of a problem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Integrity Monitor</span>
+    <div class="footer-links">
+      <a href="https://github.com/timothymartinluther1-gif/fims-desktop">Source on GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
