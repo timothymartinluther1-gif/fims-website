@@ -315,6 +315,7 @@
           <h3>Windows</h3>
           <p>Portable. No install required, just run it.</p>
           <a href="https://github.com/timothymartinluther1-gif/fims-desktop/releases/download/latest/IntegrityMonitor.exe" class="btn btn-primary">Download .exe</a>
+          <p class="download-updated" id="updatedWindows" hidden></p>
           <p class="download-note">
             Unsigned build. Windows SmartScreen may warn on first run.
             Click "More info" → "Run anyway." This is expected for a new app
@@ -326,6 +327,7 @@
           <h3>Android</h3>
           <p>Android 8.0 or newer. Install the APK file directly.</p>
           <a href="https://github.com/timothymartinluther1-gif/fims-app/releases/download/android-latest/app-debug.apk" class="btn btn-primary">Download .apk</a>
+          <p class="download-updated" id="updatedAndroid" hidden></p>
           <p class="download-note">
             After downloading, open the file and allow installs from this source when Android asks.
             This is a test build that is not from the Play Store, so Android may show a warning.
@@ -349,5 +351,35 @@
   </div>
 </footer>
 
+<script>
+// Shows "Last updated" under each download button, read from the
+// GitHub release itself, so it changes by itself after every build.
+// If GitHub can't be reached (or the repo is private) the line stays hidden.
+(function () {
+  var owner = 'timothymartinluther1-gif';
+  var items = [
+    { repo: 'fims-desktop', tag: 'latest', file: 'IntegrityMonitor.exe', el: 'updatedWindows' },
+    { repo: 'fims-app', tag: 'android-latest', file: 'app-debug.apk', el: 'updatedAndroid' }
+  ];
+  items.forEach(function (it) {
+    var el = document.getElementById(it.el);
+    if (!el || !window.fetch) return;
+    fetch('https://api.github.com/repos/' + owner + '/' + it.repo + '/releases/tags/' + it.tag)
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (rel) {
+        if (!rel) return;
+        var when = rel.published_at;
+        (rel.assets || []).forEach(function (a) {
+          if (a.name === it.file && a.updated_at) when = a.updated_at;
+        });
+        var d = new Date(when);
+        if (isNaN(d.getTime())) return;
+        el.textContent = 'Last updated: ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+        el.hidden = false;
+      })
+      .catch(function () {});
+  });
+})();
+</script>
 </body>
 </html>
