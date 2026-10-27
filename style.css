@@ -419,3 +419,17 @@ h3 { font-size: 1.15rem; margin-bottom: 8px; }
   html { scroll-behavior: auto; }
   .hash-changed { animation: none; }
 }
+
+
+/* ===== Added: hero diff demo, ghost button, two download cards ===== */
+.diff-demo { margin-top: 14px; border: 1px solid #3a3327; border-radius: 10px; overflow: hidden; font-family: var(--font-mono); font-size: 0.8rem; }
+.diff-demo-title { padding: 8px 12px; font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: #8a8278; border-bottom: 1px solid #3a3327; }
+.diff-demo-line { padding: 5px 12px; white-space: pre-wrap; }
+.diff-demo-line span { display: inline-block; min-width: 24px; margin-right: 8px; opacity: 0.5; }
+.diff-demo-del { background: rgba(212, 138, 138, 0.14); color: #e8a3a3; }
+.diff-demo-add { background: rgba(127, 176, 127, 0.16); color: #a6d4a6; }
+.diff-demo-add mark { background: rgba(127, 176, 127, 0.45); color: #e4f5e4; border-radius: 3px; padding: 0 1px; }
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.download-grid { max-width: 880px; margin-left: auto; margin-right: auto; }

@@ -1,6 +1,6 @@
 # Integrity Monitor — Website
 
-Static informational page: what the app does, how it works, and a download link.
+Static informational page: what the apps do, how they work, and download links for Windows and Android.
 Plain HTML/CSS, no build step, no server required.
 
 ## Privacy note (important — read before hosting)
@@ -50,6 +50,15 @@ https://github.com/timothymartinluther1-gif/fims-desktop/releases/download/lates
 This already updates automatically on every push to `fims-desktop`, thanks to the
 release-publishing step already set up in that repo's GitHub Actions workflow —
 nothing extra needed here.
+
+## Keeping the Android download link working
+
+The Android button points to:
+```
+https://github.com/timothymartinluther1-gif/fims-app/releases/download/android-latest/app-debug.apk
+```
+That release is refreshed by the fims-app GitHub Actions build on every push, so the link
+always gives the newest APK.
 
 ## Editing content later
 

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
 <title>Integrity Monitor: Know the Instant a File Changes</title>
-<meta name="description" content="A file integrity monitor for Windows, with encrypted cloud backup and secure file transfer built in." />
+<meta name="description" content="A file integrity monitor for Windows and Android: instant tamper alerts that show exactly what changed, remote watching from your phone, encrypted backup and secure file transfer." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
       <a href="#cloud">Cloud &amp; transfer</a>
+      <a href="#phone">On your phone</a>
       <a href="#download" class="nav-cta">Download</a>
     </nav>
   </div>
@@ -35,18 +36,20 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">Free core monitoring · Windows</p>
+        <p class="eyebrow">Free core monitoring · Windows &amp; Android</p>
         <h1>Know the instant<br />a file <em>changes.</em></h1>
         <p class="hero-sub">
           Integrity Monitor watches the files you tell it to protect and proves,
           with a cryptographic hash, whether they're still exactly what they were,
           byte for byte. The moment something's off, you're alerted. One click restores it.
-          Back files up to the cloud, or send them to someone securely, right from the same app.
+          It even shows you exactly where the file was changed. Watch your computer from your phone,
+          back files up to the cloud, or send them to someone securely, right from the same apps.
         </p>
         <div class="hero-actions">
           <a href="#download" class="btn btn-primary">Download for Windows</a>
+          <a href="#download" class="btn btn-ghost">Get the Android app</a>
         </div>
-        <p class="hero-note">No account required to try it. Your files never leave your device.</p>
+        <p class="hero-note">Free account, no card needed. Your monitored files stay on your device.</p>
       </div>
 
       <div class="hero-visual" aria-hidden="true">
@@ -65,6 +68,11 @@
           </div>
           <div class="hash-card-alert">
             <span class="alert-dot"></span> Change detected: 4 bytes differ from the trusted version
+          </div>
+          <div class="diff-demo">
+            <div class="diff-demo-title">Where it changed</div>
+            <div class="diff-demo-line diff-demo-del"><span>14</span>- Amount due: 1,200.00</div>
+            <div class="diff-demo-line diff-demo-add"><span>14</span>+ Amount due: <mark>9,</mark>200.00</div>
           </div>
         </div>
       </div>
@@ -130,7 +138,7 @@
           <span class="step-num">03</span>
           <h3>You decide what happens</h3>
           <p>The moment a hash stops matching, you're alerted with exactly what changed
-             and when. Reverse it back to the trusted version in one click, or accept it
+             and when, and shown the exact lines that changed. Reverse it back to the trusted version in one click, or accept it
              as the new baseline if the change was intentional.</p>
         </div>
       </div>
@@ -160,6 +168,12 @@
              no need to go dig through folders.</p>
         </div>
         <div class="feature-card">
+          <h3>🎯 See exactly what changed</h3>
+          <p>Review a tampered file and the app points to the exact lines, with removed text in red,
+             added text in green and the changed characters highlighted. Other file types show
+             where the bytes differ.</p>
+        </div>
+        <div class="feature-card">
           <h3>🔒 Lock a file</h3>
           <p>Deny external access to a file until you unlock it from inside the app.
              Anything else that tries just sees "Access is denied."</p>
@@ -173,6 +187,22 @@
           <h3>📋 Cases</h3>
           <p>A searchable log of everything you've reviewed, resolved, reversed, sent, or
              received. Organized, filterable, and easy to find later.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔔 Instant Windows alerts</h3>
+          <p>A Windows notification pops up the moment a protected file is changed or goes missing,
+             even when the app is in the background.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🪪 Windows Hello lock</h3>
+          <p>Optionally lock the app behind your fingerprint, face or PIN, so nobody can open
+             your monitor on an unattended computer.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📸 Tamper evidence snapshot</h3>
+          <p>When a file is tampered with, the app captures a snapshot of what happened: the file
+             as it was found, both fingerprints, the time, and who was logged in. With a paired
+             phone, it is encrypted and kept safely on the phone.</p>
         </div>
         <div class="feature-card">
           <h3>🌗 Light &amp; dark mode</h3>
@@ -223,18 +253,64 @@
     </div>
   </section>
 
+  <!-- ============ PHONE ============ -->
+  <section id="phone" class="section">
+    <div class="wrap">
+      <p class="eyebrow">On your phone</p>
+      <h2>The same protection in your pocket, and a window onto your computer.</h2>
+      <p class="section-lead">
+        The Android app matches the desktop in look and feel. Protect files on your phone,
+        send and receive files, and keep an eye on your computer from anywhere.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>📱 Monitor phone files</h3>
+          <p>Pick any file on your phone and it is checked automatically in the background.
+             If it changes or disappears, you get a notification and an alert with the details.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🖥️ Remote view</h3>
+          <p>Pair your phone with your desktop using a short code, then watch your computer's
+             files and alerts live, see when it was last online, and review a file's details
+             remotely. Fixing or restoring a file stays on the computer, by design.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔔 Alerts that reach you</h3>
+          <p>Get a notification when your computer reports a change, and add a home screen
+             widget to see at a glance whether everything is safe.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🌐 Send files anywhere</h3>
+          <p>Send a file to anyone with an account using a short code. See a live progress bar,
+             and the receiver approves it before it downloads. Received files open with one tap.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📶 Local WiFi transfer</h3>
+          <p>No internet needed. The receiver switches on their hotspot, the sender joins it,
+             and a quick QR code scan connects the two phones. The app guides you through each step.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔐 Fingerprint &amp; face login</h3>
+          <p>Log in with your fingerprint or face. Closing the app fully asks for your login
+             again, and the Remote tab asks for your password whenever you open it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ DOWNLOAD ============ -->
   <section id="download" class="section section-alt download-section">
     <div class="wrap">
       <p class="eyebrow">Get it</p>
-      <h2>Free to use. Cloud backup and transfer available as add-ons.</h2>
+      <h2>Free to use on Windows and Android. Cloud backup is an optional add-on.</h2>
       <p class="section-lead">
         Your monitored files and their history never leave your device. Cloud backup files
         are encrypted before upload, and transfers are approved by the receiver before
         anything downloads.
       </p>
 
-      <div class="download-grid download-grid-single">
+      <div class="download-grid">
         <div class="download-card">
           <h3>Windows</h3>
           <p>Portable. No install required, just run it.</p>
@@ -243,6 +319,18 @@
             Unsigned build. Windows SmartScreen may warn on first run.
             Click "More info" → "Run anyway." This is expected for a new app
             without a paid code-signing certificate, not a sign of a problem.
+          </p>
+        </div>
+
+        <div class="download-card">
+          <h3>Android</h3>
+          <p>Android 8.0 or newer. Install the APK file directly.</p>
+          <a href="https://github.com/timothymartinluther1-gif/fims-app/releases/download/android-latest/app-debug.apk" class="btn btn-primary">Download .apk</a>
+          <p class="download-note">
+            After downloading, open the file and allow installs from this source when Android asks.
+            This is a test build that is not from the Play Store, so Android may show a warning.
+            That is expected. If you open the releases page yourself, download the
+            <strong>app-debug.apk</strong> file under Assets, not the other zip files.
           </p>
         </div>
       </div>
@@ -255,7 +343,8 @@
   <div class="wrap footer-inner">
     <span>© 2026 Integrity Monitor</span>
     <div class="footer-links">
-      <a href="https://github.com/timothymartinluther1-gif/fims-desktop">Source on GitHub</a>
+      <a href="https://github.com/timothymartinluther1-gif/fims-desktop">Desktop on GitHub</a>
+      <a href="https://github.com/timothymartinluther1-gif/fims-app">Android on GitHub</a>
     </div>
   </div>
 </footer>
