@@ -436,3 +436,5 @@ h3 { font-size: 1.15rem; margin-bottom: 8px; }
 
 .download-card .download-updated { margin: -4px 0 14px; text-align: center; font-size: 0.82rem; color: var(--text-muted); }
 .download-card .download-updated[hidden] { display: none; }
+
+.brand-logo-img { height: 34px; width: auto; display: block; }
